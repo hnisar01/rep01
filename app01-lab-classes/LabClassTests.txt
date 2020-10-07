@@ -1,0 +1,14 @@
+LabClass co452Lab = new LabClass(30);
+Student pupilAndy = new Student("Andy", "1234");
+Student pupilsusan = new Student("Susan", "5678");
+Student pupilJeff = new Student("Jeff", "1122");
+pupilAndy.addCredits(20);
+pupilsusan.addCredits(20);
+pupilJeff.addCredits(20);
+pupilJeff.changeName("Geoff");
+co452Lab.enrollStudent(pupilJeff);
+co452Lab.enrollStudent(pupilsusan);
+co452Lab.enrollStudent(pupilAndy);
+co452Lab.setInstructor("Nicholas Day");
+co452Lab.setTime("Tuesday 29th September");
+co452Lab.setRoom("G3.01");
