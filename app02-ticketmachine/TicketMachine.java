@@ -19,7 +19,10 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
+    
+    private Ticket issuedticket;
+    
+    private Ticket aylesburyTicket;
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -28,6 +31,10 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        
+        issuedticket = null;
     }
 
     /**
@@ -62,6 +69,12 @@ public class TicketMachine
             System.out.println("Use a positive amount rather than: " +
                                amount);
         }
+    }
+    
+    
+   public void selectAylesbury()
+   {
+       issuedticket = aylesburyTicket;
     }
 
     /**
