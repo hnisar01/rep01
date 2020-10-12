@@ -1,0 +1,4 @@
+TicketMachine ticketMachine = new TicketMachine(200);
+ticketMachine.selectAylesbury();
+ticketMachine.printTicket();
+You must insert at least: 200 more cents.
