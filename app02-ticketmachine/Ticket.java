@@ -17,6 +17,7 @@ public class Ticket
     
     /**
      * Constructor for objects of class Ticket
+     * this method will set values for the fields
      */
     public Ticket(String destination,int price)
     {
@@ -26,13 +27,23 @@ public class Ticket
         issueDateTime = new Date();
     }
     
+    //todo add get destination add get date
+    
+    // two more methods
+    
     /**
      * 
      */
     public void print()
     {
-        System.out.println("Ticket" + destination + 
-        " price : " + " Issued " + issueDateTime);
+        System.out.println("Ticket to " + destination + 
+        " price : " + price + " Issued " + issueDateTime);
     
     }
+    
+    public int getPrice()
+    {
+        return price;
+    }
+    
 }

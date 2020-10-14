@@ -13,14 +13,12 @@
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
-    private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
     
-    private Ticket issuedticket;
+    private Ticket issuedTicket;
     
     private Ticket aylesburyTicket;
     
@@ -30,25 +28,26 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
         
-        aylesburyTicket = new Ticket("Aylesbury", 220);
-        amershamTicket = new Ticket("amersham", 300);
-        wycombeTicket = new Ticket("wycombe", 330);
+        aylesburyTicket = new Ticket("Aylesbury",220);
+        amershamTicket = new Ticket("Amersham", 300);
+        wycombeTicket = new Ticket("Wycombe", 330);
         
-        issuedticket = null;
+        issuedTicket = null;
     }
+
+    //method to add coins 
 
     /**
      * @Return The price of a ticket.
      */
     public int getPrice()
     {
-        return price;
+        return issuedTicket.getPrice();
     }
 
     /**
@@ -80,7 +79,7 @@ public class TicketMachine
     
    public void selectAylesbury()
    {
-       issuedticket = aylesburyTicket;
+       issuedTicket = aylesburyTicket;
     }
 
     /**
@@ -90,25 +89,27 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if(balance >= price) 
+        if(balance >= issuedTicket.getPrice()) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
             System.out.println("##################");
+            System.out.println();
+            issuedTicket.print();
             System.out.println();
 
             // Update the total collected with the price.
-            total = total + price;
+            total = total + issuedTicket.getPrice();
             // Reduce the balance by the price.
-            balance = balance - price;
+            balance = balance - issuedTicket.getPrice();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+                               (issuedTicket.getPrice() - balance) + 
+                               " more pence.");
                     
         }
     }
@@ -124,4 +125,25 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    /**
+     * 
+     */
+    public void printAllTickets()
+    {
+        System.out.println();
+        System.out.println("The following tickets are available:-");
+        
+        aylesburyTicket.print();
+    }
+    
+    public void printHeading()
+    {
+        System.out.println("##################");
+        System.out.println("# The BlueJ Line");
+        System.out.println("By Hassan");
+        System.out.println("# ##################");
+        System.out.println();
+    }
+    
 }
