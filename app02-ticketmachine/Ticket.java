@@ -1,6 +1,8 @@
 import java.util.Date;
 /**
- * This is where tickets will be sold.
+ * This class will store information based on the tickets 
+ * such as the destination, price 
+ * and the date/time the ticket is bought.
  *
  * @author Hassan Nisar
  * @version 09/10/2020
@@ -11,6 +13,7 @@ public class Ticket
     
     private String destination;
     
+    // currency in pence 
     private int price;
     
     private Date issueDateTime;
@@ -37,13 +40,19 @@ public class Ticket
     public void print()
     {
         System.out.println("Ticket to " + destination + 
-        " price : " + price + " Issued " + issueDateTime);
+        " price : " + price + "pence" + 
+        "Issued " + issueDateTime);
     
     }
     
     public int getPrice()
     {
         return price;
+    }
+    
+    public String getDestination()
+    {
+        return destination;
     }
     
 }

@@ -81,20 +81,30 @@ public class TicketMachine
    {
        issuedTicket = aylesburyTicket;
     }
-
-    /**
+    
+     public void selectAmersham()
+   {
+       issuedTicket = amershamTicket;
+    }
+   
+    public void selectwycombe()
+   {
+       issuedTicket = wycombeTicket;
+    }
+    
+   /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
      */
-    public void printTicket()
-    {
+   public void printTicket()
+   {
         if(balance >= issuedTicket.getPrice()) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            issuedTicket.print();
             System.out.println("##################");
             System.out.println();
             issuedTicket.print();
@@ -135,6 +145,8 @@ public class TicketMachine
         System.out.println("The following tickets are available:-");
         
         aylesburyTicket.print();
+        amershamTicket.print();
+        wycombeTicket.print();
     }
     
     public void printHeading()
@@ -146,4 +158,8 @@ public class TicketMachine
         System.out.println();
     }
     
+    public void insert20pCoin()
+    {
+        balance = balance + 20;
+    }
 }
