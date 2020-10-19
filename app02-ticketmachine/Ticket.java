@@ -29,18 +29,14 @@ public class Ticket
         
         issueDateTime = new Date();
     }
-    
-    //todo add get destination add get date
-    
-    // two more methods
-    
+   
     /**
      * 
      */
     public void print()
     {
         System.out.println("Ticket to " + destination + 
-        " price : " + price + "pence" + 
+        " price : " + price + " pence " + 
         "Issued " + issueDateTime);
     
     }
@@ -54,5 +50,4 @@ public class Ticket
     {
         return destination;
     }
-    
 }

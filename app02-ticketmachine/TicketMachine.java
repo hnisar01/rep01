@@ -40,7 +40,10 @@ public class TicketMachine
         issuedTicket = null;
     }
 
-    //method to add coins 
+    public void printBalance()
+    {
+        System.out.println("current balance is " + balance + " pence");
+    }
 
     /**
      * @Return The price of a ticket.
@@ -102,7 +105,7 @@ public class TicketMachine
         if(balance >= issuedTicket.getPrice()) 
         {
             // Simulate the printing of a ticket.
-            System.out.println("##################");
+            System.out.println("");
             System.out.println("# The BlueJ Line");
             issuedTicket.print();
             System.out.println("##################");
@@ -158,8 +161,31 @@ public class TicketMachine
         System.out.println();
     }
     
+    public void insert10pCoin()
+    {
+        balance = balance + 10;
+        System.out.println("you have entered 10p");
+        printBalance();
+    }
+    
     public void insert20pCoin()
     {
         balance = balance + 20;
+        System.out.println("you have entered 20p");
+        printBalance();
+    }
+    
+    public void insert£1Coin()
+    {
+        balance = balance + 100;
+        System.out.println("you have entered 100p");
+        printBalance();
+    }
+    
+    public void insert£2Coin()
+    {
+        balance = balance + 200;
+        System.out.println("you have entered 200p");
+        printBalance();
     }
 }
