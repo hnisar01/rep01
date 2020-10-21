@@ -161,6 +161,10 @@ public class TicketMachine
         System.out.println();
     }
     
+    /**
+     * This method will add ten pence
+     */
+    
     public void insert10pCoin()
     {
         balance = balance + 10;
@@ -168,6 +172,9 @@ public class TicketMachine
         printBalance();
     }
     
+    /**
+     * This method will add twenty pence
+     */
     public void insert20pCoin()
     {
         balance = balance + 20;
@@ -175,6 +182,9 @@ public class TicketMachine
         printBalance();
     }
     
+    /**
+     * This method will add ten pence
+     */
     public void insert£1Coin()
     {
         balance = balance + 100;
@@ -182,6 +192,9 @@ public class TicketMachine
         printBalance();
     }
     
+    /**
+     * This method will add ten pence
+     */
     public void insert£2Coin()
     {
         balance = balance + 200;
