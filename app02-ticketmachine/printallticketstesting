@@ -1,0 +1,7 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.printAllTickets();
+
+The following tickets are available:-
+Ticket to Aylesbury price : 220 pence Issued Wed Oct 21 14:32:42 BST 2020
+Ticket to Amersham price : 300 pence Issued Wed Oct 21 14:32:42 BST 2020
+Ticket to Wycombe price : 330 pence Issued Wed Oct 21 14:32:42 BST 2020

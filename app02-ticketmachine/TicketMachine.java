@@ -183,7 +183,7 @@ public class TicketMachine
     }
     
     /**
-     * This method will add ten pence
+     * This method will add £1
      */
     public void insert£1Coin()
     {
@@ -193,7 +193,7 @@ public class TicketMachine
     }
     
     /**
-     * This method will add ten pence
+     * This method will add £2
      */
     public void insert£2Coin()
     {
