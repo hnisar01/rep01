@@ -1,0 +1,49 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insertMoney(110);
+ticketMa1.selectAylesbury();
+ticketMa1.printTicket();
+You must insert at least: 110 more pence.
+ticketMa1.insert£1Coin();
+you have entered 100p
+current balance is 210 pence
+ticketMa1.insert10pCoin();
+you have entered 10p
+current balance is 220 pence
+ticketMa1.printTicket();
+
+# The BlueJ Line
+Ticket to Aylesbury price : 220 pence Issued Mon Oct 19 15:26:52 BST 2020
+##################
+
+Ticket to Aylesbury price : 220 pence Issued Mon Oct 19 15:26:52 BST 2020
+
+ticketMa1.insertMoney(100);
+ticketMa1.selectAmersham();
+ticketMa1.printTicket();
+You must insert at least: 200 more pence.
+ticketMa1.insert£2Coin();
+you have entered 200p
+current balance is 300 pence
+ticketMa1.printTicket();
+
+# The BlueJ Line
+Ticket to Amersham price : 300 pence Issued Mon Oct 19 15:26:52 BST 2020
+##################
+
+Ticket to Amersham price : 300 pence Issued Mon Oct 19 15:26:52 BST 2020
+
+ticketMa1.insertMoney(310);
+ticketMa1.selectwycombe();
+ticketMa1.printTicket();
+You must insert at least: 20 more pence.
+ticketMa1.insert20pCoin();
+you have entered 20p
+current balance is 330 pence
+ticketMa1.printTicket();
+
+# The BlueJ Line
+Ticket to Wycombe price : 330 pence Issued Mon Oct 19 15:26:52 BST 2020
+##################
+
+Ticket to Wycombe price : 330 pence Issued Mon Oct 19 15:26:52 BST 2020
+
