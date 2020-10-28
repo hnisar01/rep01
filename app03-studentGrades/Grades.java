@@ -8,5 +8,5 @@
  */
 public enum Grades
 {
-    X, F, D, C, B, A
+   NULL, F, D, C, B, A
 }
