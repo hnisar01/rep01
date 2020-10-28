@@ -88,6 +88,9 @@ public class Student
         course.print();
     }
     
+    /**
+     * Enrols student onto course.
+     */
     public void enrolOnCourse(Course course)
     {
         this.course = course;

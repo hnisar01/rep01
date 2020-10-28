@@ -59,7 +59,7 @@ public class Module
     }
     
     /**
-     * 
+     * boolean represents if module is completed
      */
     public boolean isCompleted()
     {
@@ -67,7 +67,7 @@ public class Module
     }
     
     /**
-     * 
+     * method to print add module title, code number and mark
      */
     public void print()
     {

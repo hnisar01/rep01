@@ -35,6 +35,9 @@ public class Course
         createModules();
     }
     
+    /**
+     * method to create modules
+     */
     public void createModules()
     {
         module1 = new Module("CO454", "Hilary");
@@ -43,6 +46,9 @@ public class Course
         module4 = new Module("CO456", "Web Deevelopment");
     }
 
+    /**
+     * method to add module
+     */
     public void addModule(Module module, int moduleNo)
     {
         if(moduleNo == 1)
@@ -51,6 +57,9 @@ public class Course
         }
     }
     
+    /**
+     * method to give mark to module
+     */
     public void setMark(int mark, int moduleNo)
     {
         if(moduleNo == 1)
@@ -71,6 +80,9 @@ public class Course
         }        
     }
     
+    /**
+     * method to calculate final mark
+     */
     public void calculateFinalMark()
     {
         if(courseCompleted())
@@ -87,6 +99,9 @@ public class Course
         }
     }
     
+    /**
+     * boolean to say if course is completed or not
+     */
     public boolean courseCompleted()
     {
         if((module1.isCompleted()) && (module2.isCompleted()))
@@ -106,6 +121,9 @@ public class Course
         System.out.println("Course " + codeNo + " - " + title);
     }
     
+    /**
+     * method to print modules
+     */
     public void printModules()
     {
         // print all the module marks
