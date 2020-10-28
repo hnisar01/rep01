@@ -63,7 +63,7 @@ public class Module
      */
     public boolean isCompleted()
     {
-        return mark >= 0;
+        return mark >= 40;
     }
     
     /**

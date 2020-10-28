@@ -37,10 +37,10 @@ public class Course
     
     public void createModules()
     {
-        module1 = new Module("CO452", "Programming Concepts");
+        module1 = new Module("CO454", "Hilary");
         module2 = new Module("CO452", "Programming Concepts");
-        module3 = new Module("CO452", "Programming Concepts");
-        module4 = new Module("CO452", "Programming Concepts");
+        module3 = new Module("CO450", "Networking");
+        module4 = new Module("CO456", "Web Deevelopment");
     }
 
     public void addModule(Module module, int moduleNo)
@@ -51,12 +51,24 @@ public class Course
         }
     }
     
-    public void setMark(int mark, String codeNo)
+    public void setMark(int mark, int moduleNo)
     {
-        if(module1.getCodeNo() == codeNo)
+        if(moduleNo == 1)
         {
             module1.awardMark(mark);
+        } 
+        else if(moduleNo == 2)
+        {
+            module2.awardMark(mark);
         }
+        else if(moduleNo == 3)
+        {
+            module3.awardMark(mark);
+        }
+        else if(moduleNo == 4)
+        {
+            module4.awardMark(mark);
+        }        
     }
     
     public void calculateFinalMark()
@@ -97,10 +109,15 @@ public class Course
     public void printModules()
     {
         // print all the module marks
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
         
         if(courseCompleted())
         {
             System.out.println("Final Mark = " + finalMark);
+            System.out.println("Final Grade = " + finalGrade);
         }
     }
 }

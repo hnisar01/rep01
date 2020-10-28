@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * The Student class represents a student in a student administration system.
+ * This class holds the students and also allows a student to be added onto a course.
  * It holds the student details relevant in our context.
  * 
  * @author Michael Kölling and David Barnes
@@ -17,11 +17,6 @@ public class Student
     private int credits;
     
     private Course course;
-    
-    public void enrolOnCourse(Course course)
-    {
-        this.course = course;
-    }
     
     /**
      * Create a new student with a given name and ID number.
@@ -90,5 +85,11 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
+    }
+    
+    public void enrolOnCourse(Course course)
+    {
+        this.course = course;
     }
 }
