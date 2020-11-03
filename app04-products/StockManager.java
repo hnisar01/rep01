@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (Hassan Nisar) 
- * @version (28/10/2020)
+ * @author Hassan Nisar 
+ * @version (03/11/2020)
  */
 public class StockManager
 {
@@ -35,12 +35,40 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
-        product.increaseQuantity(amount);
+        
+        if(product != null)
+            product.deliver(amount);
+        else
+            System.out.println("Invalid Product ID = " + id);
     }
     
+    /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            if(quantity > product.getQuantity())
+                quantity = product.getQuantity();
+                
+            printProduct(id);
+            
+            for(int count = 0; count <= quantity; count++)
+            {
+                product.sellOne();
+            }
+
+            printProduct(id);
+        }
+    }    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -48,13 +76,14 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
-        for (Product product : stock)
+        for(Product product : stock)
         {
-            if (product.getID() == id)
+            if(product.getID() == id)
             {
-                return product;
+               return product; 
             }
         }
+        
         return null;
     }
     
@@ -71,42 +100,36 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Print details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
      */
-    public void printProductDetails()
-    {
-    }
-    
-    public void printStock()
-    {
-        printHeading();
-       
-        for(Product product :stock)
-        {
-            System.out.println(product);
-        }
-    }
-    
-    public void printHeading()
-    {
-        System.out.println("Hassan's products");
-    }
-    
-    
-     /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int id)
+    public void printProduct(int id)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
-            
-            product.sellOne();
-            
+            System.out.println(product.toString());
         }
+    }
+    
+    /**
+     * Print out each product in the stock
+     * in the order they are in the stock list
+     */
+    public void printAllProducts()
+    {
+        System.out.println();
+        System.out.println("Hassan's Stock");
+        System.out.println("====================");
+        System.out.println();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+
+        System.out.println();
     }
 }

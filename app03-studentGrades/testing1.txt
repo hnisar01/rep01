@@ -1,0 +1,16 @@
+Course course1 = new Course("G400", "computing");
+course1.setMark(60, 1);
+course1.setMark(70, 2);
+course1.setMark(60, 3);
+course1.setMark(70, 4);
+course1.calculateFinalMark();
+Course G400 - computing
+course1.print();
+Course G400 - computing
+course1.printModules();
+Module: CO454 Hilary Mark = 60
+Module: CO452 Programming Concepts Mark = 70
+Module: CO450 Networking Mark = 60
+Module: CO456 Web Deevelopment Mark = 70
+Final Mark = 65
+Final Grade = null

@@ -1,27 +1,53 @@
+import java.util.Random;
+   
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
  * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @version 03/11/2020
+ * Modified by Hassan Nisar
  */
 public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
 
+    private Random randomGenerator;
+    
     /**
      * Create a StockManager and populate it with a few
      * sample products.
      */
     public StockDemo(StockManager manager)
     {
-    this.manager = manager;
+        this.manager = manager;
+        randomGenerator = new Random();
         
-    manager.addProduct(new Product(01,"Nissan GTR"));
-    manager.addProduct(new Product(02,"Ford Mustang"));
-    manager.addProduct(new Product(03,"Dodge charger"));
+        manager.addProduct(new Product(101, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(102, "Apple iPhone 12"));
+        manager.addProduct(new Product(103, "Google Pixel 4A"));
+        manager.addProduct(new Product(104, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(105, "Apple iPhone 12"));
+        manager.addProduct(new Product(106, "Google Pixel 4A"));
+        manager.addProduct(new Product(107, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(108, "Apple iPhone 12"));
+        manager.addProduct(new Product(109, "Google Pixel 4A"));        
+        manager.addProduct(new Product(110, "Apple iPhone 12"));
+    }
+    
+    /**
+     * This method will run all the tests needed to 
+     * demonstrate that the requirements have been met
+     */
+    public void runDemo()
+    {
+        manager.printAllProducts();
+        demoDeliverProducts();
+        manager.printAllProducts();
+        demoSellProducts();
+        manager.printAllProducts();
     }
     
     /**
@@ -29,56 +55,31 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
+    private void demoDeliverProducts()
     {
-        // Show details of all of the products.
-        manager.printProductDetails();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        //
-        manager.printProductDetails();
-    }
-    
-    /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void showDetails(int id)
-    {
-        Product product = getProduct(id);
+        int quantity = 0;
         
-        if(product != null) 
+        for(int id = 101; id <= 110; id++)
         {
-            System.out.println(product.toString());
+            quantity = randomGenerator.nextInt(8);
+            manager.deliverProduct(id, quantity);
         }
     }
     
-    
-    
     /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
+     * Provide a very simple demonstration of how a StockManager
+     * might be used. Details of one product are shown, the
+     * product is restocked, and then the details are shown again.
      */
-    public Product getProduct(int id)
+    private void demoSellProducts()
     {
-        Product product = manager.findProduct(id);
+        int quantity = 0;
         
-        if(product == null) 
+        for(int id = 101; id <= 110; id++)
         {
-            System.out.println("Product with ID: " + id +
-                               " is not recognised.");
+            quantity = randomGenerator.nextInt(4);
+            manager.sellProduct(id, quantity);
         }
-        return product;
     }
-
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
-    {
-        return manager;
-    }
+    
 }

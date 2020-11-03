@@ -20,6 +20,7 @@ public class Course
     private int finalMark;
     private String finalGrade;
     
+    
     /**
      * Constructor for objects of class Course
      */
@@ -99,9 +100,11 @@ public class Course
         }
     }
     
+    
     /**
      * boolean to say if course is completed or not
      */
+  
     public boolean courseCompleted()
     {
         if((module1.isCompleted()) && (module2.isCompleted()))
