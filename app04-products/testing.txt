@@ -1,0 +1,64 @@
+StockManager stock = new StockManager();
+StockDemo stockDem1 = new StockDemo(stock);
+stock.printAllProducts();
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 0
+102: Ford Mustang 02 stock level: 0
+103: Dodge Charger 03 stock level: 0
+104: Porsche Carrera 04 stock level: 0
+105: Ford GT 05 stock level: 0
+106: Ferrari Enzo 06 stock level: 0
+107: Lamborghini Sesto Elemento 07 stock level: 0
+108: Toyota Supra 08 stock level: 0
+109: Ferrari 452 09 stock level: 0
+110: Nissan 350z 10 stock level: 0
+
+stock.deliverProduct(101, 30);
+stock.deliverProduct(102, 40);
+stock.deliverProduct(103, 50);
+stock.deliverProduct(104, 55);
+stock.deliverProduct(105, 60);
+stock.deliverProduct(106, 65);
+stock.deliverProduct(107, 70);
+stock.deliverProduct(108, 25);
+stock.deliverProduct(109, 20);
+stock.deliverProduct(110, 20);
+stock.sellProduct(102, 28);
+102: Ford Mustang 02 stock level: 40
+102: Ford Mustang 02 stock level: 11
+stock.sellProduct(105 , 30);
+105: Ford GT 05 stock level: 60
+105: Ford GT 05 stock level: 29
+stock.sellProduct(110, 10);
+110: Nissan 350z 10 stock level: 20
+110: Nissan 350z 10 stock level: 9
+stock.sellProduct(107, 25);
+107: Lamborghini Sesto Elemento 07 stock level: 70
+107: Lamborghini Sesto Elemento 07 stock level: 44
+stock.printAllProducts();
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 30
+102: Ford Mustang 02 stock level: 11
+103: Dodge Charger 03 stock level: 50
+104: Porsche Carrera 04 stock level: 55
+105: Ford GT 05 stock level: 29
+106: Ferrari Enzo 06 stock level: 65
+107: Lamborghini Sesto Elemento 07 stock level: 44
+108: Toyota Supra 08 stock level: 25
+109: Ferrari 452 09 stock level: 20
+110: Nissan 350z 10 stock level: 9
+
+stock.searchProduct("Nissan")
+101: Nissan GTR 01 stock level: 30
+110: Nissan 350z 10 stock level: 9
+    returned Object null
+stock.searchProduct("Ford")
+102: Ford Mustang 02 stock level: 11
+105: Ford GT 05 stock level: 29
+    returned Object null

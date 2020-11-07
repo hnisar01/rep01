@@ -6,8 +6,8 @@ import java.util.Random;
  * the StockManager class is completed.
  * 
  * @author David J. Barnes and Michael Kölling.
- * @version 03/11/2020
- * Modified by Hassan Nisar
+ * @version 2016.02.29
+ * Modified Hassan Nisar
  */
 public class StockDemo
 {
@@ -17,29 +17,28 @@ public class StockDemo
     private Random randomGenerator;
     
     /**
-     * Create a StockManager and populate it with a few
-     * sample products.
+     * Create a StockManager and apply some products
+     * 
      */
     public StockDemo(StockManager manager)
     {
         this.manager = manager;
         randomGenerator = new Random();
         
-        manager.addProduct(new Product(101, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(102, "Apple iPhone 12"));
-        manager.addProduct(new Product(103, "Google Pixel 4A"));
-        manager.addProduct(new Product(104, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(105, "Apple iPhone 12"));
-        manager.addProduct(new Product(106, "Google Pixel 4A"));
-        manager.addProduct(new Product(107, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(108, "Apple iPhone 12"));
-        manager.addProduct(new Product(109, "Google Pixel 4A"));        
-        manager.addProduct(new Product(110, "Apple iPhone 12"));
+        manager.addProduct(new Product(101, "Nissan GTR 01"));
+        manager.addProduct(new Product(102, "Ford Mustang 02"));
+        manager.addProduct(new Product(103, "Dodge Charger 03"));
+        manager.addProduct(new Product(104, "Porsche Carrera 04"));
+        manager.addProduct(new Product(105, "Ford GT 05"));
+        manager.addProduct(new Product(106, "Ferrari Enzo 06"));
+        manager.addProduct(new Product(107, "Lamborghini Sesto Elemento 07"));
+        manager.addProduct(new Product(108, "Toyota Supra 08"));
+        manager.addProduct(new Product(109, "Ferrari 452 09"));        
+        manager.addProduct(new Product(110, "Nissan 350z 10"));
     }
     
     /**
-     * This method will run all the tests needed to 
-     * demonstrate that the requirements have been met
+     * This method will show that requirements have been met,
      */
     public void runDemo()
     {
@@ -52,8 +51,7 @@ public class StockDemo
     
     /**
      * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * might be used.
      */
     private void demoDeliverProducts()
     {
@@ -68,8 +66,7 @@ public class StockDemo
     
     /**
      * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * might be used.
      */
     private void demoSellProducts()
     {
