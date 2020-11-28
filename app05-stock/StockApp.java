@@ -9,6 +9,7 @@
  */
 public class StockApp
 {
+    public static final String PRINT_ALL = "printall";
     // Use to get user input
     private InputReader reader;
     
@@ -16,7 +17,7 @@ public class StockApp
     
     private StockDemo oldStock;
     
-    /**
+   /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
@@ -26,7 +27,7 @@ public class StockApp
         oldStock = new StockDemo(manager);
     }
 
-    /** prints heading and shows choices
+   /** prints heading and shows choices
      * 
      */
     public void run()
@@ -35,7 +36,26 @@ public class StockApp
         getMenuChoice();
     }
     
-    /** 
+   public void deliverProduct()
+    {
+        System.out.println("Please enter the product ID");
+        String value = reader.getInput();
+        int id = Integer.parseInt(value);
+        
+        System.out.println("Please enter the Amount");
+        value = reader.getInput();
+        int amount = Integer.parseInt(value);
+        
+        manager.deliverProduct(id, amount);
+    }
+    
+   public void restockAllProducts()
+    {
+        System.out.println("Please enter the product");
+        String value = reader.getInput();
+    }
+    
+   /** 
      * 
      */
     public void getMenuChoice()
@@ -49,6 +69,7 @@ public class StockApp
            
             String choice = reader.getInput();
             choice = choice.toLowerCase();
+            
             if(choice.equals("quit"))
             {
                 finished = true;
@@ -61,22 +82,7 @@ public class StockApp
         }
     }
     
-    private void executeMenuChoice(String choice)
-    {
-        if(choice.equals("add"))
-        {
-            addProduct();
-        }
-        else if (choice.equals("remove"))
-        {
-            removeProduct();
-        }
-        else if (choice.equals("printall"))
-        {
-            printAllProducts();
-        }
-    }
-    
+ 
    /**this adds a product
    * 
    */
@@ -97,11 +103,44 @@ public class StockApp
       manager.addProduct(product);
    }
     
+    private void executeMenuChoice(String choice)
+    {
+        if(choice.equals("add"))
+        {
+            addProduct();
+        }
+        else if(choice.equals("remove"))
+        {
+            removeProduct(); 
+        }
+        else if(choice.equals(PRINT_ALL))
+        {
+            printAllProducts();
+        }
+        else if(choice.equals("deliver"))
+        {
+            deliverProduct();
+        }
+        else if(choice.equals("restock"))
+        {
+            restockAllProducts();
+        }
+    }
+    
    /** this removes a product
    * 
    */
    private void removeProduct()
    {
+       System.out.println("\nremoving a product!\n");
+        
+      System.out.println("Please enter the product ID");
+      String value = reader.getInput();
+      int id = Integer.parseInt(value);
+        
+      
+      
+      manager.removeProduct(id);
    }
    
    /** this prints all products
@@ -111,9 +150,8 @@ public class StockApp
    {
       manager.printAllProducts();
    }
-    
-    
-    /**
+        
+   /**
      * Print out a menu of operation choices
      */
     private void printMenuChoices()

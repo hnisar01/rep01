@@ -9,6 +9,8 @@ import java.util.ArrayList;
  */
 public class StockManager
 {
+    public static final int RESTOCK_LEVEL =1;
+    
    // A list of the products.
     private ArrayList<Product> stock;
     
@@ -20,7 +22,7 @@ public class StockManager
         stock = new ArrayList<>();
     }
 
-   /**
+  /**
      * Add a product to the list.
      * 
      */
@@ -29,7 +31,7 @@ public class StockManager
         stock.add(item);
     }
     
-    /**
+   /**
      * Receive a delivery of a particular product.
      * 
      */
@@ -40,13 +42,62 @@ public class StockManager
         System.out.println("Deliever Product" + id);
         product.deliver(amount);
         printProduct(id);
-        
-        
-        
-        if(product != null)
-            product.deliver(amount);
+           
+         if(product != null)
+         {
+             product.deliver(amount);
+            System.out.println("Product Delivered : " + product + " amount = "
+            + amount);
+        }    
         else
+        {
             System.out.println("Invalid Product ID = " + id);
+        }
+    }
+  
+  
+   public void removeProduct (int id)
+   {
+        Product product = findProduct(id);
+        
+        if(product !=null)
+        {
+            stock.remove(product);
+            System.out.println("Remove Product" + id);
+            printProduct(id);
+        }
+        else
+        {
+            System.out.println("Product " + id + " not found");
+        }
+    }
+    
+    public void restockLowStock(int lowStockLevel, int restockLevel)
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <=lowStockLevel)
+            {
+                product.deliver(restockLevel);
+                System.out.println(product.getName() + " Low Stock");
+                System.out.println("Has been restocked to " + restockLevel);
+            }
+        }
+    }
+    
+    public void printLowStock(int lowStockLevel)
+    {
+        for(Product product : stock)
+        {
+            int id = 101;
+            
+            if(product.getQuantity() < RESTOCK_LEVEL)
+            {
+                System.out.println("Warning! Low Stock");
+                System.out.println(product);
+                
+            }
+        }
     }
     
     /**
