@@ -1,0 +1,199 @@
+108: Toyota Supra 08 stock level: 0
+110: Nissan 350z 10 stock level: 0
+111: ferrari enzo stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> restock
+Please enter the product ID
+> 101
+Please enter the amount
+> 30
+Nissan GTR 01 Low Stock
+Has been restocked to 30
+Ford Mustang 02 Low Stock
+Has been restocked to 30
+Dodge Charger 03 Low Stock
+Has been restocked to 30
+Porsche Carrera 04 Low Stock
+Has been restocked to 30
+Ford GT 05 Low Stock
+Has been restocked to 30
+Ferrari Enzo 06 Low Stock
+Has been restocked to 30
+Lamborghini Sesto Elemento 07 Low Stock
+Has been restocked to 30
+Toyota Supra 08 Low Stock
+Has been restocked to 30
+Nissan 350z 10 Low Stock
+Has been restocked to 30
+ferrari enzo Low Stock
+Has been restocked to 30
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> printall
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 30
+102: Ford Mustang 02 stock level: 30
+103: Dodge Charger 03 stock level: 30
+104: Porsche Carrera 04 stock level: 30
+105: Ford GT 05 stock level: 30
+106: Ferrari Enzo 06 stock level: 30
+107: Lamborghini Sesto Elemento 07 stock level: 30
+108: Toyota Supra 08 stock level: 30
+110: Nissan 350z 10 stock level: 30
+111: ferrari enzo stock level: 30
+
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> sell
+Selling a product
+Please enter the product ID
+> 102
+Please enter the Amount
+> 10
+102: Ford Mustang 02 stock level: 30
+102: Ford Mustang 02 stock level: 20
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> printall
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 30
+102: Ford Mustang 02 stock level: 20
+103: Dodge Charger 03 stock level: 30
+104: Porsche Carrera 04 stock level: 30
+105: Ford GT 05 stock level: 30
+106: Ferrari Enzo 06 stock level: 30
+107: Lamborghini Sesto Elemento 07 stock level: 30
+108: Toyota Supra 08 stock level: 30
+110: Nissan 350z 10 stock level: 30
+111: ferrari enzo stock level: 30
+
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> deliver
+Please enter the product ID
+> 102
+Please enter the Amount
+> 10
+Deliever Product102
+102: Ford Mustang 02 stock level: 30
+Product Delivered : 102: Ford Mustang 02 stock level: 40 amount = 10
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> printall
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 30
+102: Ford Mustang 02 stock level: 40
+103: Dodge Charger 03 stock level: 30
+104: Porsche Carrera 04 stock level: 30
+105: Ford GT 05 stock level: 30
+106: Ferrari Enzo 06 stock level: 30
+107: Lamborghini Sesto Elemento 07 stock level: 30
+108: Toyota Supra 08 stock level: 30
+110: Nissan 350z 10 stock level: 30
+111: ferrari enzo stock level: 30
+
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> quit

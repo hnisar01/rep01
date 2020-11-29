@@ -14,7 +14,7 @@ public class StockManager
    // A list of the products.
     private ArrayList<Product> stock;
     
-   /**
+    /**
      * Initialise the stock manager.
      */
     public StockManager()
@@ -22,21 +22,41 @@ public class StockManager
         stock = new ArrayList<>();
     }
 
-  /**
-     * Add a product to the list.
-     * 
-     */
-    public void addProduct(Product item)
-    {
-        stock.add(item);
-    }
+     /**
+       * Add a product to the list.
+       * 
+       */
+     public void addProduct(Product item)
+     {
+       stock.add(item);
+     }
     
-   /**
-     * Receive a delivery of a particular product.
-     * 
-     */
-    public void deliverProduct(int id, int amount)
-    {
+  
+      public void renameProduct(int id, String name)
+      {
+        Product product = findProduct(id);
+       
+          if(product != null)
+          {
+             product.setName(name);
+             System.out.println("Renamed Product" + name);
+             printProduct(id);
+          }
+   
+        else
+         {
+            System.out.println("Product " + id + " not found!");
+         }
+     }
+
+   
+    
+      /**
+       * Receive a delivery of a particular product.
+       * 
+       */
+      public void deliverProduct(int id, int amount)
+      {
         Product product = findProduct(id);
         
         System.out.println("Deliever Product" + id);
@@ -46,18 +66,18 @@ public class StockManager
          if(product != null)
          {
              product.deliver(amount);
-            System.out.println("Product Delivered : " + product + " amount = "
+             System.out.println("Product Delivered : " + product + " amount = "
             + amount);
-        }    
+         }    
         else
         {
             System.out.println("Invalid Product ID = " + id);
         }
-    }
+    } 
   
   
-   public void removeProduct (int id)
-   {
+    public void removeProduct (int id)
+    {
         Product product = findProduct(id);
         
         if(product !=null)
@@ -72,18 +92,18 @@ public class StockManager
         }
     }
     
-    public void restockLowStock(int lowStockLevel, int restockLevel)
-    {
-        for(Product product : stock)
-        {
-            if(product.getQuantity() <=lowStockLevel)
-            {
-                product.deliver(restockLevel);
-                System.out.println(product.getName() + " Low Stock");
-                System.out.println("Has been restocked to " + restockLevel);
-            }
-        }
-    }
+   public void restockLowStock(int lowStockLevel, int restockLevel)
+   {
+       for(Product product : stock)
+       {
+           if(product.getQuantity() <=lowStockLevel)
+           {
+               product.deliver(restockLevel);
+               System.out.println(product.getName() + " Low Stock");
+               System.out.println("Has been restocked to " + restockLevel);
+           }
+       }
+   }
     
     public void printLowStock(int lowStockLevel)
     {
@@ -115,7 +135,7 @@ public class StockManager
                 
             printProduct(id);
             
-            for(int count = 0; count <= quantity; count++)
+            for(int count = 1; count <= quantity; count++)
             {
                 product.sellOne();
             }
