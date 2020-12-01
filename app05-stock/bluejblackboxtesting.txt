@@ -1,0 +1,200 @@
+Ford Mustang 02 Low Stock
+Has been restocked to 20
+Porsche Carrera 04 Low Stock
+Has been restocked to 20
+Ford GT 05 Low Stock
+Has been restocked to 20
+Ferrari Enzo 06 Low Stock
+Has been restocked to 20
+Lamborghini Sesto Elemento 07 Low Stock
+Has been restocked to 20
+Toyota Supra 08 Low Stock
+Has been restocked to 20
+Ferrari 452 09 Low Stock
+Has been restocked to 20
+Nissan 350z 10 Low Stock
+Has been restocked to 20
+renault clio Low Stock
+Has been restocked to 20
+vauxhall astra Low Stock
+Has been restocked to 20
+mercedes c63 Low Stock
+Has been restocked to 20
+audi rs3 Low Stock
+Has been restocked to 20
+bmw m4 Low Stock
+Has been restocked to 20
+bmw m4 Low Stock
+Has been restocked to 20
+ Low Stock
+Has been restocked to 20
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> printall
+
+Hassan's Products
+====================
+
+101: Nissan GTR 01 stock level: 36
+102: Ford Mustang 02 stock level: 20
+104: Porsche Carrera 04 stock level: 20
+105: Ford GT 05 stock level: 20
+106: Ferrari Enzo 06 stock level: 20
+107: Lamborghini Sesto Elemento 07 stock level: 20
+108: Toyota Supra 08 stock level: 20
+109: Ferrari 452 09 stock level: 20
+110: Nissan 350z 10 stock level: 20
+111: renault clio stock level: 20
+112: vauxhall astra stock level: 20
+113: mercedes c63 stock level: 20
+114: audi rs3 stock level: 20
+115: bmw m4 stock level: 20
+115: bmw m4 stock level: 20
+116:  stock level: 20
+
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> sell
+Selling a product
+Please enter the product ID
+> 108
+Please enter the Amount
+> 2
+108: Toyota Supra 08 stock level: 20
+108: Toyota Supra 08 stock level: 18
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> 108
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> sell
+Selling a product
+Please enter the product ID
+> 108
+Please enter the Amount
+> 19
+108: Toyota Supra 08 stock level: 18
+108: Toyota Supra 08 stock level: 0
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> sell
+Selling a product
+Please enter the product ID
+> 109
+Please enter the Amount
+> -5
+109: Ferrari 452 09 stock level: 20
+109: Ferrari 452 09 stock level: 20
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> search
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> lowstock
+******************************
+ Stock Management Application 
+    App05: Hassan Nisar
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Deliver a product
+    Rename:     Rename a Product
+    Lowstock:   Show Lowstock Products
+    Restock:    Restock Products
+    Sell:       Sell a product
+
+> 
